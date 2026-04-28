@@ -271,6 +271,17 @@ st.markdown("""
     color: var(--gold2) !important;
   }
 
+  /* ── Light theme fix: keep inputs readable ── */
+  html[data-theme="light"] div[data-testid="stNumberInput"] label,
+  html[data-theme="light"] div[data-testid="stSlider"] label {
+    color: #111827 !important;
+  }
+  html[data-theme="light"] div[data-testid="stNumberInput"] input {
+    color: #111827 !important;
+    background: rgba(255,255,255,0.94) !important;
+    border-color: rgba(17,24,39,0.22) !important;
+  }
+
   /* ── Primary button ── */
   div[data-testid="stButton"] > button[kind="primary"] {
     background: linear-gradient(135deg, #C9A84C 0%, #E8C97A 55%, #C9A84C 100%) !important;
