@@ -633,26 +633,3 @@ if predict_clicked:
       <div class="conf-label">Prediction confidence based on similarity to training data</div>
     </div>
     """, unsafe_allow_html=True)
-
-# ─────────────────────────────────────────────────────────────────────────────
-# UI — MODEL INFO EXPANDER
-# ─────────────────────────────────────────────────────────────────────────────
-# st.markdown("<br>", unsafe_allow_html=True)
-# with st.expander("ℹ️ How this model works"):
-#     st.markdown(f"""
-# **Pipeline:** `PolynomialFeatures(degree=2)` → `StandardScaler` → `Ridge(α=1.0)`
-
-# | Step | Purpose |
-# |---|---|
-# | **Polynomial Features** | Expands 4 inputs → **{n_features} features** (squares + cross-products) |
-# | **Standard Scaler** | Normalises features so Ridge penalises them fairly |
-# | **Ridge Regression** | Regularised linear model — prevents overfitting on correlated poly terms |
-
-# **Why Ridge over plain Linear Regression?**
-
-# Polynomial expansion creates correlated terms (`Area²`, `Area × Bedrooms`, etc.).
-# Plain `LinearRegression` inflates their coefficients, hurting generalisation.
-# `Ridge` + `StandardScaler` keeps coefficients stable, boosting CV R² from ~92% → ~99.6%.
-
-# **Dataset:** `house_pricing_dataset_2000.xlsx` · {n_rows:,} records · 80/20 train-test split
-#     """)
