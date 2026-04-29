@@ -273,11 +273,15 @@ st.markdown("""
 
   /* ── Light theme fix: keep inputs readable ── */
   html[data-theme="light"] div[data-testid="stNumberInput"] label,
-  html[data-theme="light"] div[data-testid="stSlider"] label {
+  html[data-theme="light"] div[data-testid="stSlider"] label,
+  body[data-theme="light"] div[data-testid="stNumberInput"] label,
+  body[data-theme="light"] div[data-testid="stSlider"] label {
     color: #111827 !important;
   }
-  html[data-theme="light"] div[data-testid="stNumberInput"] input {
+  html[data-theme="light"] div[data-testid="stNumberInput"] input,
+  body[data-theme="light"] div[data-testid="stNumberInput"] input {
     color: #111827 !important;
+    -webkit-text-fill-color: #111827 !important;
     background: rgba(255,255,255,0.94) !important;
     border-color: rgba(17,24,39,0.22) !important;
   }
